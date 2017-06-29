@@ -11,6 +11,10 @@
 		F70D9BA81F052CAD0015D1AC /* MNPermissionServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70D9BA71F052CAD0015D1AC /* MNPermissionServiceTests.swift */; };
 		F70D9BAA1F052CAD0015D1AC /* MNPermissionService.h in Headers */ = {isa = PBXBuildFile; fileRef = F70D9B9C1F052CAD0015D1AC /* MNPermissionService.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F70D9BB41F052F8B0015D1AC /* PermissionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70D9BB31F052F8B0015D1AC /* PermissionService.swift */; };
+		F70D9BE41F058F6C0015D1AC /* MNPermissionFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70D9BE31F058F6C0015D1AC /* MNPermissionFactory.swift */; };
+		F70D9BE61F058FA80015D1AC /* MNPermissionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70D9BE51F058FA80015D1AC /* MNPermissionType.swift */; };
+		F70D9BE81F058FF10015D1AC /* MNCalendarPermission.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70D9BE71F058FF10015D1AC /* MNCalendarPermission.swift */; };
+		F70D9BEA1F05904C0015D1AC /* MNContactPermission.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70D9BE91F05904C0015D1AC /* MNContactPermission.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +35,10 @@
 		F70D9BA71F052CAD0015D1AC /* MNPermissionServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MNPermissionServiceTests.swift; sourceTree = "<group>"; };
 		F70D9BA91F052CAD0015D1AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F70D9BB31F052F8B0015D1AC /* PermissionService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PermissionService.swift; sourceTree = "<group>"; };
+		F70D9BE31F058F6C0015D1AC /* MNPermissionFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNPermissionFactory.swift; sourceTree = "<group>"; };
+		F70D9BE51F058FA80015D1AC /* MNPermissionType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNPermissionType.swift; sourceTree = "<group>"; };
+		F70D9BE71F058FF10015D1AC /* MNCalendarPermission.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNCalendarPermission.swift; sourceTree = "<group>"; };
+		F70D9BE91F05904C0015D1AC /* MNContactPermission.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNContactPermission.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +84,10 @@
 				F70D9B9C1F052CAD0015D1AC /* MNPermissionService.h */,
 				F70D9B9D1F052CAD0015D1AC /* Info.plist */,
 				F70D9BB31F052F8B0015D1AC /* PermissionService.swift */,
+				F70D9BE31F058F6C0015D1AC /* MNPermissionFactory.swift */,
+				F70D9BE51F058FA80015D1AC /* MNPermissionType.swift */,
+				F70D9BE71F058FF10015D1AC /* MNCalendarPermission.swift */,
+				F70D9BE91F05904C0015D1AC /* MNContactPermission.swift */,
 			);
 			path = MNPermissionService;
 			sourceTree = "<group>";
@@ -201,7 +213,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F70D9BE61F058FA80015D1AC /* MNPermissionType.swift in Sources */,
 				F70D9BB41F052F8B0015D1AC /* PermissionService.swift in Sources */,
+				F70D9BE41F058F6C0015D1AC /* MNPermissionFactory.swift in Sources */,
+				F70D9BE81F058FF10015D1AC /* MNCalendarPermission.swift in Sources */,
+				F70D9BEA1F05904C0015D1AC /* MNContactPermission.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
