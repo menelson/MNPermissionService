@@ -10,7 +10,7 @@ import Foundation
 import Contacts
 import UIKit
 
-class MNContactPermission: MNPermissionFactory {
+class MNContactPermission: MNPermissionService, MNPermissionFactory {
     typealias EntityType = CNEntityType
     typealias StoreType = CNContactStore
     
@@ -18,6 +18,10 @@ class MNContactPermission: MNPermissionFactory {
     var entity = CNEntityType.contacts
     var message = "I need this too"
     var title = "Contact Settings"
+    
+    internal init() {
+        super.init(message: message, title: title)
+    }
     
     func requestAccess() -> Bool {
         

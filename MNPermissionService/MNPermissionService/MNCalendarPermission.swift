@@ -10,7 +10,7 @@ import Foundation
 import EventKit
 import UIKit
 
-class MNCalendarPermission: MNPermissionFactory {
+class MNCalendarPermission: MNPermissionService, MNPermissionFactory {
     typealias EntityType = EKEntityType
     typealias StoreType = EKEventStore
     
@@ -19,7 +19,8 @@ class MNCalendarPermission: MNPermissionFactory {
     var message: String = "We need these"
     var title = "Calendar Settings"
     
-    init() {
+    internal init() {
+        super.init(message: message, title: title)
     }
     
     func requestAccess() -> (Bool) {
