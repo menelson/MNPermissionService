@@ -16,8 +16,8 @@ class MNCalendarPermission: MNPermissionService, MNPermissionFactory {
     
     var store = EKEventStore()
     var entity = EKEntityType.event
-    var message: String = "We need these"
-    var title = "Calendar Settings"
+    var message: String = "Without access to the Calendar Events some features of the app may not function correctly"
+    var title = "Calendar Event Settings"
     
     internal init() {
         super.init(message: message, title: title)
@@ -37,27 +37,4 @@ class MNCalendarPermission: MNPermissionService, MNPermissionFactory {
         return false
     }
     
-    func repromptUserOfServiceNeed() {
-        let dialog = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        
-        let settingsAction = UIAlertAction(title: "Settings", style: .default, handler: {
-            action in
-            
-            let settingsURL = URL(string: UIApplicationOpenSettingsURLString)
-            UIApplication.shared.open(settingsURL!, options: [:], completionHandler: nil)
-            
-        })
-        
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-        
-        dialog.addAction(settingsAction)
-        dialog.addAction(cancelAction)
-        
-        if var currentViewController = UIApplication.shared.keyWindow?.rootViewController {
-            while let presentedViewController = currentViewController.presentedViewController {
-                currentViewController = presentedViewController
-            }
-            currentViewController.present(dialog, animated: true, completion: nil)
-        }
-    }
 }

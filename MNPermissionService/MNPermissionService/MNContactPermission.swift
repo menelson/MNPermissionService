@@ -16,7 +16,7 @@ class MNContactPermission: MNPermissionService, MNPermissionFactory {
     
     var store = CNContactStore()
     var entity = CNEntityType.contacts
-    var message = "I need this too"
+    var message = "Without access to the Contacts some features of the app may not function correctly"
     var title = "Contact Settings"
     
     internal init() {
@@ -41,27 +41,4 @@ class MNContactPermission: MNPermissionService, MNPermissionFactory {
         return false
     }
     
-    func repromptUserOfServiceNeed() {
-        let dialog = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        
-        let settingsAction = UIAlertAction(title: "Settings", style: .default, handler: {
-            action in
-            
-            let settingsURL = URL(string: UIApplicationOpenSettingsURLString)
-            UIApplication.shared.open(settingsURL!, options: [:], completionHandler: nil)
-            
-        })
-        
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-        
-        dialog.addAction(settingsAction)
-        dialog.addAction(cancelAction)
-        
-        if var currentViewController = UIApplication.shared.keyWindow?.rootViewController {
-            while let presentedViewController = currentViewController.presentedViewController {
-                currentViewController = presentedViewController
-            }
-            currentViewController.present(dialog, animated: true, completion: nil)
-        }
-    }
 }

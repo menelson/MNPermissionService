@@ -47,4 +47,29 @@ public class MNPermissionService {
         }
     }
     
+    func repromptUserOfServiceNeed() {
+        let dialog = UIAlertController(title: titleInternal, message: messageInternal, preferredStyle: .alert)
+        
+        let settingsAction = UIAlertAction(title: "Settings", style: .default, handler: {
+            action in
+            
+            let settingsURL = URL(string: UIApplicationOpenSettingsURLString)
+            UIApplication.shared.open(settingsURL!, options: [:], completionHandler: nil)
+            
+        })
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        
+        dialog.addAction(settingsAction)
+        dialog.addAction(cancelAction)
+        
+        if var currentViewController = UIApplication.shared.keyWindow?.rootViewController {
+            while let presentedViewController = currentViewController.presentedViewController {
+                currentViewController = presentedViewController
+            }
+            currentViewController.present(dialog, animated: true, completion: nil)
+        }
+    }
+
+    
 }

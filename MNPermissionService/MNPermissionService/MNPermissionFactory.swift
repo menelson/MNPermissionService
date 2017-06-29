@@ -18,5 +18,4 @@ protocol MNPermissionFactory {
     var title: String { get }
     
     func requestAccess() -> Bool
-    func repromptUserOfServiceNeed()
 }
