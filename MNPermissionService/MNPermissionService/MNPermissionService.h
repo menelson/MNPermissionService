@@ -16,4 +16,4 @@ FOUNDATION_EXPORT const unsigned char MNPermissionServiceVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <MNPermissionService/PublicHeader.h>
 
-
+#import<MNPermissionService/MNPermissionService.h>

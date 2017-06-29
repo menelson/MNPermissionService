@@ -2,7 +2,7 @@
 //  MNContactPermission.swift
 //  MNPermissionService
 //
-//  Created by Mike Nelson 80044 on 6/29/17.
+//  Created by Mike Nelson on 6/29/17.
 //
 //
 
@@ -22,9 +22,8 @@ class MNContactPermission: MNPermissionService, MNPermissionFactory {
     internal init() {
         super.init(message: message, title: title)
     }
-    
-    func requestAccess() -> Bool {
-        
+
+    func requestUserAccess(completionHandler: @escaping (Bool) -> Void) {
         if CNContactStore.authorizationStatus(for: .contacts) == CNAuthorizationStatus.denied {
             repromptUserOfServiceNeed()
         } else {
@@ -37,8 +36,6 @@ class MNContactPermission: MNPermissionService, MNPermissionFactory {
                 
             })
         }
-        
-        return false
     }
     
 }

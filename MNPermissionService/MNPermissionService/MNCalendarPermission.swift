@@ -2,7 +2,7 @@
 //  MNCalendarPermission.swift
 //  MNPermissionService
 //
-//  Created by Mike Nelson 80044 on 6/29/17.
+//  Created by Mike Nelson on 6/29/17.
 //
 //
 
@@ -23,7 +23,7 @@ class MNCalendarPermission: MNPermissionService, MNPermissionFactory {
         super.init(message: message, title: title)
     }
     
-    func requestAccess() -> (Bool) {
+    func requestUserAccess(completionHandler: @escaping (Bool) -> Void) {
         if EKEventStore.authorizationStatus(for: .event) == EKAuthorizationStatus.denied {
             repromptUserOfServiceNeed()
         } else {
@@ -31,10 +31,9 @@ class MNCalendarPermission: MNPermissionService, MNPermissionFactory {
                 if error != nil {
                     print("Error requesting Access")
                 }
+                completionHandler(accessGranted)
             }
         }
-        
-        return false
     }
     
 }

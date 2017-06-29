@@ -2,7 +2,7 @@
 //  MNPermissionProtocol.swift
 //  MNPermissionService
 //
-//  Created by Mike Nelson 80044 on 6/29/17.
+//  Created by Mike Nelson on 6/29/17.
 //
 //
 
@@ -39,10 +39,18 @@ public class MNPermissionService {
         
         switch service {
         case .calendar:
-            _ = MNCalendarPermission().requestAccess()
+            MNCalendarPermission().requestUserAccess(completionHandler: { (granted) in
+                if !granted {
+                    print("Permission not available")
+                }
+            })
             break;
         case .contact:
-            _ = MNContactPermission().requestAccess()
+            MNContactPermission().requestUserAccess(completionHandler: { (granted) in
+                if !granted {
+                    print("Permission not available")
+                }
+            })
             break;
         }
     }

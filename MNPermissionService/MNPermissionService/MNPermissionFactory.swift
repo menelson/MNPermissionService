@@ -2,7 +2,7 @@
 //  PermissionFactory.swift
 //  MNPermissionService
 //
-//  Created by Mike Nelson 80044 on 6/29/17.
+//  Created by Mike Nelson on 6/29/17.
 //
 //
 
@@ -17,5 +17,5 @@ protocol MNPermissionFactory {
     var message: String { get }
     var title: String { get }
     
-    func requestAccess() -> Bool
+    func requestUserAccess(completionHandler: @escaping (Bool) -> Void)
 }

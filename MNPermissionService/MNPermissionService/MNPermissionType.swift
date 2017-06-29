@@ -2,7 +2,7 @@
 //  MNPermissionType.swift
 //  MNPermissionService
 //
-//  Created by Mike Nelson 80044 on 6/29/17.
+//  Created by Mike Nelson on 6/29/17.
 //
 //
 
