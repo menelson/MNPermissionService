@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		F70D9BA31F052CAD0015D1AC /* MNPermissionService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F70D9B991F052CAD0015D1AC /* MNPermissionService.framework */; };
-		F70D9BA81F052CAD0015D1AC /* MNPermissionServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70D9BA71F052CAD0015D1AC /* MNPermissionServiceTests.swift */; };
 		F70D9BAA1F052CAD0015D1AC /* MNPermissionService.h in Headers */ = {isa = PBXBuildFile; fileRef = F70D9B9C1F052CAD0015D1AC /* MNPermissionService.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F70D9BB41F052F8B0015D1AC /* MNPermissionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70D9BB31F052F8B0015D1AC /* MNPermissionService.swift */; };
 		F70D9BE41F058F6C0015D1AC /* MNPermissionFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70D9BE31F058F6C0015D1AC /* MNPermissionFactory.swift */; };
@@ -22,6 +21,8 @@
 		F7B72A611F0685670086D7DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7B72A5F1F0685670086D7DD /* LaunchScreen.storyboard */; };
 		F7B72A741F06895A0086D7DD /* MNPermissionService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F70D9B991F052CAD0015D1AC /* MNPermissionService.framework */; };
 		F7B72A751F06895A0086D7DD /* MNPermissionService.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F70D9B991F052CAD0015D1AC /* MNPermissionService.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F7B72AAA1F06BC5B0086D7DD /* MNCalendarPermissionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B72AA91F06BC5B0086D7DD /* MNCalendarPermissionTests.swift */; };
+		F7B72AAE1F06BE880086D7DD /* MNContactPermissionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B72AAD1F06BE880086D7DD /* MNContactPermissionTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,19 +33,19 @@
 			remoteGlobalIDString = F70D9B981F052CAD0015D1AC;
 			remoteInfo = MNPermissionService;
 		};
-		F7B72A681F0685670086D7DD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F70D9B901F052CAD0015D1AC /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F7B72A531F0685670086D7DD;
-			remoteInfo = "Sample App";
-		};
 		F7B72A761F06895A0086D7DD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F70D9B901F052CAD0015D1AC /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = F70D9B981F052CAD0015D1AC;
 			remoteInfo = MNPermissionService;
+		};
+		F7B72AAB1F06BD4D0086D7DD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F70D9B901F052CAD0015D1AC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F7B72A531F0685670086D7DD;
+			remoteInfo = "Sample App";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -67,7 +68,6 @@
 		F70D9B9C1F052CAD0015D1AC /* MNPermissionService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MNPermissionService.h; sourceTree = "<group>"; };
 		F70D9B9D1F052CAD0015D1AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F70D9BA21F052CAD0015D1AC /* MNPermissionServiceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MNPermissionServiceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F70D9BA71F052CAD0015D1AC /* MNPermissionServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MNPermissionServiceTests.swift; sourceTree = "<group>"; };
 		F70D9BA91F052CAD0015D1AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F70D9BB31F052F8B0015D1AC /* MNPermissionService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNPermissionService.swift; sourceTree = "<group>"; };
 		F70D9BE31F058F6C0015D1AC /* MNPermissionFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNPermissionFactory.swift; sourceTree = "<group>"; };
@@ -81,7 +81,8 @@
 		F7B72A5D1F0685670086D7DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F7B72A601F0685670086D7DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F7B72A621F0685670086D7DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F7B72A671F0685670086D7DD /* Sample AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Sample AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7B72AA91F06BC5B0086D7DD /* MNCalendarPermissionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNCalendarPermissionTests.swift; sourceTree = "<group>"; };
+		F7B72AAD1F06BE880086D7DD /* MNContactPermissionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNContactPermissionTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,13 +109,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F7B72A641F0685670086D7DD /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -134,7 +128,6 @@
 				F70D9B991F052CAD0015D1AC /* MNPermissionService.framework */,
 				F70D9BA21F052CAD0015D1AC /* MNPermissionServiceTests.xctest */,
 				F7B72A541F0685670086D7DD /* Sample App.app */,
-				F7B72A671F0685670086D7DD /* Sample AppTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -156,8 +149,9 @@
 		F70D9BA61F052CAD0015D1AC /* MNPermissionServiceTests */ = {
 			isa = PBXGroup;
 			children = (
-				F70D9BA71F052CAD0015D1AC /* MNPermissionServiceTests.swift */,
 				F70D9BA91F052CAD0015D1AC /* Info.plist */,
+				F7B72AA91F06BC5B0086D7DD /* MNCalendarPermissionTests.swift */,
+				F7B72AAD1F06BE880086D7DD /* MNContactPermissionTests.swift */,
 			);
 			path = MNPermissionServiceTests;
 			sourceTree = "<group>";
@@ -219,6 +213,7 @@
 			);
 			dependencies = (
 				F70D9BA51F052CAD0015D1AC /* PBXTargetDependency */,
+				F7B72AAC1F06BD4D0086D7DD /* PBXTargetDependency */,
 			);
 			name = MNPermissionServiceTests;
 			productName = MNPermissionServiceTests;
@@ -243,24 +238,6 @@
 			productName = "Sample App";
 			productReference = F7B72A541F0685670086D7DD /* Sample App.app */;
 			productType = "com.apple.product-type.application";
-		};
-		F7B72A661F0685670086D7DD /* Sample AppTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F7B72A711F0685680086D7DD /* Build configuration list for PBXNativeTarget "Sample AppTests" */;
-			buildPhases = (
-				F7B72A631F0685670086D7DD /* Sources */,
-				F7B72A641F0685670086D7DD /* Frameworks */,
-				F7B72A651F0685670086D7DD /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				F7B72A691F0685670086D7DD /* PBXTargetDependency */,
-			);
-			name = "Sample AppTests";
-			productName = "Sample AppTests";
-			productReference = F7B72A671F0685670086D7DD /* Sample AppTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -287,12 +264,6 @@
 						DevelopmentTeam = 2QKP24Y3HJ;
 						ProvisioningStyle = Automatic;
 					};
-					F7B72A661F0685670086D7DD = {
-						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 2QKP24Y3HJ;
-						ProvisioningStyle = Automatic;
-						TestTargetID = F7B72A531F0685670086D7DD;
-					};
 				};
 			};
 			buildConfigurationList = F70D9B931F052CAD0015D1AC /* Build configuration list for PBXProject "MNPermissionService" */;
@@ -311,7 +282,6 @@
 				F70D9B981F052CAD0015D1AC /* MNPermissionService */,
 				F70D9BA11F052CAD0015D1AC /* MNPermissionServiceTests */,
 				F7B72A531F0685670086D7DD /* Sample App */,
-				F7B72A661F0685670086D7DD /* Sample AppTests */,
 			);
 		};
 /* End PBXProject section */
@@ -341,13 +311,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F7B72A651F0685670086D7DD /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -367,7 +330,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F70D9BA81F052CAD0015D1AC /* MNPermissionServiceTests.swift in Sources */,
+				F7B72AAE1F06BE880086D7DD /* MNContactPermissionTests.swift in Sources */,
+				F7B72AAA1F06BC5B0086D7DD /* MNCalendarPermissionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,13 +344,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F7B72A631F0685670086D7DD /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -395,15 +352,15 @@
 			target = F70D9B981F052CAD0015D1AC /* MNPermissionService */;
 			targetProxy = F70D9BA41F052CAD0015D1AC /* PBXContainerItemProxy */;
 		};
-		F7B72A691F0685670086D7DD /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F7B72A531F0685670086D7DD /* Sample App */;
-			targetProxy = F7B72A681F0685670086D7DD /* PBXContainerItemProxy */;
-		};
 		F7B72A771F06895A0086D7DD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = F70D9B981F052CAD0015D1AC /* MNPermissionService */;
 			targetProxy = F7B72A761F06895A0086D7DD /* PBXContainerItemProxy */;
+		};
+		F7B72AAC1F06BD4D0086D7DD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F7B72A531F0685670086D7DD /* Sample App */;
+			targetProxy = F7B72AAB1F06BD4D0086D7DD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -623,36 +580,6 @@
 			};
 			name = Release;
 		};
-		F7B72A721F0685680086D7DD /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = 2QKP24Y3HJ;
-				INFOPLIST_FILE = "Sample AppTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.mnjr.Sample-AppTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sample App.app/Sample App";
-			};
-			name = Debug;
-		};
-		F7B72A731F0685680086D7DD /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = 2QKP24Y3HJ;
-				INFOPLIST_FILE = "Sample AppTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.mnjr.Sample-AppTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sample App.app/Sample App";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -690,14 +617,7 @@
 				F7B72A701F0685680086D7DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-		};
-		F7B72A711F0685680086D7DD /* Build configuration list for PBXNativeTarget "Sample AppTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F7B72A721F0685680086D7DD /* Debug */,
-				F7B72A731F0685680086D7DD /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
