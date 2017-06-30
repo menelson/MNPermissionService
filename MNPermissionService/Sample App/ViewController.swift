@@ -26,6 +26,16 @@ class ViewController: UIViewController {
         let service = MNPermissionService.create(service: .calendar)
         _ = service.requestAccess(service: .calendar)
     }
+    
+    @IBAction func didTapContact(_ sender: Any) {
+        let service = MNPermissionService.create(service: .contact)
+        _ = service.requestAccess(service: .contact)
+    }
+    
+    @IBAction func didTapLocation(_ sender: Any) {
+       let service = MNPermissionService.create(service: .locationInUse)
+        _ = service.requestAccess(service: .locationInUse)
+    }
 
 
 }

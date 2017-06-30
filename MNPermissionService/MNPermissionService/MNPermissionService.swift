@@ -30,6 +30,9 @@ public class MNPermissionService {
         case .contact:
             result = MNContactPermission()
             break
+        case .locationInUse:
+            result = MNLocationInUsePermission()
+            break
         }
         
         return result
@@ -44,14 +47,19 @@ public class MNPermissionService {
                     print("Permission not available")
                 }
             })
-            break;
+            break
         case .contact:
             MNContactPermission().requestUserAccess(completionHandler: { (granted) in
                 if !granted {
                     print("Permission not available")
                 }
             })
-            break;
+            break
+        case .locationInUse:
+            MNLocationInUsePermission().requestUserAccess(completionHandler: { (granted) in
+                
+            })
+            break
         }
     }
     

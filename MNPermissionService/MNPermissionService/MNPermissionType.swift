@@ -11,4 +11,5 @@ import Foundation
 public enum MNPermissionType {
     case calendar
     case contact
+    case locationInUse
 }

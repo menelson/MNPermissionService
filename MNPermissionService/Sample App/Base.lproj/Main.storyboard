@@ -28,11 +28,29 @@
                                     <action selector="didTapCalendar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TjL-bP-dFp"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ic-dl-VhH">
+                                <rect key="frame" x="116" y="307" width="88" height="30"/>
+                                <state key="normal" title="Contact Test"/>
+                                <connections>
+                                    <action selector="didTapContact:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SMn-Ih-fP4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bEK-AC-514">
+                                <rect key="frame" x="114" y="345" width="92" height="30"/>
+                                <state key="normal" title="Location Test"/>
+                                <connections>
+                                    <action selector="didTapLocation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cOx-Tr-LcE"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="bEK-AC-514" firstAttribute="top" secondItem="5Ic-dl-VhH" secondAttribute="bottom" constant="8" id="0O4-Tw-ly5"/>
                             <constraint firstItem="3jI-jp-H34" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="DNl-ww-RM2"/>
                             <constraint firstItem="3jI-jp-H34" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Feh-do-X67"/>
+                            <constraint firstItem="5Ic-dl-VhH" firstAttribute="top" secondItem="3jI-jp-H34" secondAttribute="bottom" constant="8" id="mc6-ck-p3D"/>
+                            <constraint firstItem="5Ic-dl-VhH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nmF-pp-toM"/>
+                            <constraint firstItem="bEK-AC-514" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="p8F-Dv-cBk"/>
                         </constraints>
                     </view>
                 </viewController>
