@@ -35,7 +35,7 @@ public class MNPermissionService {
         return result
     }
     
-    func requestAccess(service: MNPermissionType) {
+    public func requestAccess(service: MNPermissionType) {
         
         switch service {
         case .calendar:
